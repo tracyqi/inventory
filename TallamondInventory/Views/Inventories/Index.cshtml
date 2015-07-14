@@ -1,0 +1,239 @@
+﻿@model PagedList.IPagedList<TallamondInventory.Models.Inventory>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Inventory";
+}
+
+<h2>Inventory</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using (Html.BeginForm("Index", "Inventory", FormMethod.Get))
+{
+    <p>
+        Find by title: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Handle)*@
+            @Html.ActionLink("Handle", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Title)*@
+            @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.TitleSortParm , currentFilter=ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Body__HTML_)*@
+            @Html.ActionLink("Body__HTML", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Type)*@
+            @Html.ActionLink("Type", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Tags)*@
+            @Html.ActionLink("Tags", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+       </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Published)*@
+            @Html.ActionLink("Published", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Option1_Name)*@
+            @Html.ActionLink("Option1_Name", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Option1_Value)*@
+            @Html.ActionLink("Option1_Value", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Option2_Name)*@
+            @Html.ActionLink("Option2_Name", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Option2_Value)*@
+            @Html.ActionLink("Option2_Value", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Option3_Name)*@
+            @Html.ActionLink("Option3_Name", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Option3_Value)*@
+            @Html.ActionLink("Option3_Value", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Original_Price)*@
+            @Html.ActionLink("Original_Price", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Variant_SKU)*@
+            @Html.ActionLink("Variant_SKU", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Variant_Price)*@
+            @Html.ActionLink("Variant_Price", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Variant_Inventory_Qty)*@
+            @Html.ActionLink("Variant_Inventory_Qty", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Variant_Taxable)*@
+            @Html.ActionLink("Variant_Taxable", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Vendor)*@
+            @Html.ActionLink("Vendor", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.VendorShort)*@
+            @Html.ActionLink("VendorShort", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Lead_Time)*@
+            @Html.ActionLink("Lead_Time", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.MOQ)*@
+            @Html.ActionLink("MOQ", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Condition)*@
+            @Html.ActionLink("Condition", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Collection)*@
+            @Html.ActionLink("Collection", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.SEO_Title)*@
+            @Html.ActionLink("SEO_Title", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.SEO_Description)*@
+            @Html.ActionLink("SEO_Description", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Image_Src)*@
+            @Html.ActionLink("Image_Src", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.CreatedDate)*@
+            @Html.ActionLink("CreatedDate", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.ModifiedDate)*@
+            @Html.ActionLink("ModifiedDate", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Handle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Body__HTML_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tags)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Published)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Option1_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Option1_Value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Option2_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Option2_Value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Option3_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Option3_Value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Original_Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Variant_SKU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Variant_Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Variant_Inventory_Qty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Variant_Taxable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vendor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VendorShort)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lead_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MOQ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Condition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Collection)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEO_Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEO_Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image_Src)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
