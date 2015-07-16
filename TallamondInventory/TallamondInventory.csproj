@@ -175,25 +175,25 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Inventory.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Inventory.Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Inventory.cs">
-      <DependentUpon>Inventory.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Inventory.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Inventory.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Inventory1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Inventory.tt</DependentUpon>
+      <DependentUpon>Tallamond.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Tallamond.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tallamond.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tallamond.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tallamond.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tallamond.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tallamond.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -207,23 +207,24 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\Inventory.edmx">
+    <EntityDeploy Include="Models\Tallamond.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Inventory.Designer.cs</LastGenOutput>
+      <LastGenOutput>Tallamond.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Inventory.Context.tt">
+    <Content Include="Models\Tallamond.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Inventory.edmx</DependentUpon>
-      <LastGenOutput>Inventory.Context.cs</LastGenOutput>
+      <DependentUpon>Tallamond.edmx</DependentUpon>
+      <LastGenOutput>Tallamond.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Inventory.edmx.diagram">
-      <DependentUpon>Inventory.edmx</DependentUpon>
+    <Content Include="Models\Tallamond.edmx.diagram">
+      <DependentUpon>Tallamond.edmx</DependentUpon>
     </Content>
-    <Content Include="Models\Inventory.tt">
+    <Content Include="Models\Tallamond.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Inventory.edmx</DependentUpon>
-      <LastGenOutput>Inventory1.cs</LastGenOutput>
+      <DependentUpon>Tallamond.edmx</DependentUpon>
+      <LastGenOutput>Tallamond.cs</LastGenOutput>
     </Content>
+    <None Include="Properties\PublishProfiles\tallamond.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

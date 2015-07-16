@@ -26,16 +26,16 @@ namespace TallamondInventory.Models
         public string Option2_Name { get; set; }
         public string Option2_Value { get; set; }
         public string Option3_Name { get; set; }
-        public Nullable<double> Option3_Value { get; set; }
+        public string Option3_Value { get; set; }
         public Nullable<double> Original_Price { get; set; }
         public string Variant_SKU { get; set; }
         public Nullable<double> Variant_Price { get; set; }
-        public Nullable<double> Variant_Inventory_Qty { get; set; }
+        public Nullable<int> Variant_Inventory_Qty { get; set; }
         public Nullable<bool> Variant_Taxable { get; set; }
         public string Vendor { get; set; }
         public string VendorShort { get; set; }
-        public Nullable<int> Lead_Time { get; set; }
-        public Nullable<int> MOQ { get; set; }
+        public string Lead_Time { get; set; }
+        public string MOQ { get; set; }
         public string Condition { get; set; }
         public string Collection { get; set; }
         public string SEO_Title { get; set; }

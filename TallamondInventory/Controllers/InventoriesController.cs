@@ -43,7 +43,7 @@ namespace TallamondInventory.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                inventory = inventory.Where(s => s.Title.IndexOf(searchString, 0, StringComparison.CurrentCultureIgnoreCase) != -1);
+                inventory = inventory.Where(s => s.Title.Contains(searchString));
             }
 
             switch (sortOrder)
