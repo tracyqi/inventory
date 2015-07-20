@@ -30,10 +30,6 @@
             @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.TitleSortParm , currentFilter=ViewBag.CurrentFilter })
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.Body__HTML_)*@
-            @Html.ActionLink("Body__HTML", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
-        </th>
-        <th>
             @*@Html.DisplayNameFor(model => model.Type)*@
             @Html.ActionLink("Type", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
         </th>
@@ -139,13 +135,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.ActionLink("RFQ", "RFQ", new { id = item.ID })
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Handle)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Body__HTML_)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Type)
@@ -221,11 +220,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ModifiedDate)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>
 }

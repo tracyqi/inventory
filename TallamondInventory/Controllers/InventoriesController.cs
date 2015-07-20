@@ -82,6 +82,21 @@ namespace TallamondInventory.Controllers
             return View(inventory);
         }
 
+        // GET: Inventories/Details/5
+        public ActionResult RFQ(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Inventory inventory = db.Inventories.Find(id);
+            if (inventory == null)
+            {
+                return HttpNotFound();
+            }
+            return View(inventory);
+        }
+
         // GET: Inventories/Create
         public ActionResult Create()
         {

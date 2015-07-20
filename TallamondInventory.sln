@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallamondInventory", "Talla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallamondInventory.Tests", "TallamondInventory.Tests\TallamondInventory.Tests.csproj", "{00FEF184-3780-445D-87FF-3A1E9C06FAAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlILSmart", "CrawlILSmart\CrawlILSmart.csproj", "{2EFFDE0D-DAC1-439B-99C6-EC952CDC1C86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{00FEF184-3780-445D-87FF-3A1E9C06FAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00FEF184-3780-445D-87FF-3A1E9C06FAAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00FEF184-3780-445D-87FF-3A1E9C06FAAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EFFDE0D-DAC1-439B-99C6-EC952CDC1C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EFFDE0D-DAC1-439B-99C6-EC952CDC1C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EFFDE0D-DAC1-439B-99C6-EC952CDC1C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFFDE0D-DAC1-439B-99C6-EC952CDC1C86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
