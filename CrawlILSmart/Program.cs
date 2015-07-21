@@ -21,8 +21,29 @@ namespace CrawlILSmart
             //// The following code ensures that the WebJob will be running continuously
             //host.RunAndBlock();
 
-            CrawlILSmart();
+            //CrawlILSmart();
+
+            crawlPartsbase();
         }
+
+        private static void crawlPartsbase()
+        {
+            IWebDriver driver = new InternetExplorerDriver(@"F:\IEDriverServer_x64_2.46.0");
+            driver.Navigate().GoToUrl("http://www.partsbase.com/landing/login.asp");
+
+            var usernameField = driver.FindElement(By.Name("username"));
+            usernameField.SendKeys("tallaadmin");
+
+            var passwdField = driver.FindElement(By.Name("password"));
+            passwdField.SendKeys("Ta11a2015!");
+
+            var submitBtn = driver.FindElement(By.XPath("//a[@class='btn btn-success' and @value='Log In']"));
+            submitBtn.Click();
+
+
+        }
+        //tallaadmin
+//Ta11a2015!
 
         private static void CrawlILSmart()
         {
